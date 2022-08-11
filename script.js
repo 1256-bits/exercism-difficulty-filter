@@ -30,8 +30,5 @@ function filterByDiff (e) {
     const cards = document.querySelectorAll(".c-exercise-widget");
     const diff = e.target.innerText.toLowerCase();
     
-    cards.forEach(card => {
-        if (!card.querySelector(`.--${diff}`))
-            card.style.display = 'none';
-        });
+    cards.forEach(card => card.style.display = (card.querySelector(`.--${diff}`)) ? '' : 'none');
 }
