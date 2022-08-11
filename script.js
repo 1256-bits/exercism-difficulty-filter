@@ -1,3 +1,12 @@
+// ==UserScript==
+// @name        New script - exercism.org
+// @namespace   Violentmonkey Scripts
+// @match       https://exercism.org/tracks/*/exercises
+// @grant       none
+// @version     1.0
+// @author      -
+// @description 8/11/2022, 10:43:20 PM
+// ==/UserScript==
 const style = document.querySelector("style");
 const body = document.querySelector("body");
 const buttons = document.createElement("div");
