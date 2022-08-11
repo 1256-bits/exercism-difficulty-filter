@@ -13,7 +13,7 @@ const buttons = document.createElement("div");
 
 buttons.innerHTML = `<button class="buttons">Easy</button>
                      <button class="buttons">Medium</button>
-                     <button class="buttons">Hard</button`;
+                     <button class="buttons">Hard</button>`;
 style.innerHTML += `
 .buttons-div {
     display: flex;
