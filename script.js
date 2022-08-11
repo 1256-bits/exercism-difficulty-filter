@@ -5,8 +5,8 @@ const buttons = document.createElement("div");
 buttons.innerHTML = `<button class="buttons">Easy</button>
                      <button class="buttons">Medium</button>
                      <button class="buttons">Hard</button`;
-style.innerHTML +=  `
-.buttons - div {
+style.innerHTML += `
+.buttons-div {
     display: flex;
     position: absolute;
     top: 0px;
@@ -21,4 +21,17 @@ style.innerHTML +=  `
 } `
 
 buttons.classList.toggle("buttons-div");
+
+Array.from(buttons.children).forEach(child => child.addEventListener("click", filterByDiff));
+
 body.appendChild(buttons);
+
+function filterByDiff (e) {
+    const cards = document.querySelectorAll(".c-exercise-widget");
+    const diff = e.target.innerText.toLowerCase();
+    
+    cards.forEach(card => {
+        if (!card.querySelector(`.--${diff}`))
+            card.style.display = 'none';
+        });
+}
